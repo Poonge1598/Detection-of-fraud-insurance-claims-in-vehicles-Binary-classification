@@ -1,7 +1,31 @@
-# Detection-of-fraud-insurance-claims-in-vehicles-Binary-classification
+# Detection of Fraudulent Insurance Claims in Vehicles - Binary Classification
 
-# Employed several supervised machine learning models such as logistic regression,Support vector machines(SVM),random forest and XG-boost to classify whether a particular record could be classified as fraudulent or not depending on its characteristics.Optimised threshold based on which yields the best youden score,f-1 score.
+This project focuses on detecting fraudulent insurance claims in the context of vehicles. Various supervised machine learning models were employed for this task, including Logistic Regression, Support Vector Machines (SVM), Random Forest, and XGBoost. The goal was to classify whether a given record could be categorized as fraudulent based on its characteristics. The classification threshold was optimized to maximize the Youden score and F1-score.
 
-# Conclusion:
-# After reporting all the results and evaluations, we can see that all models – despite a good accuracy score over 0.9 – always struggles to reach a good recall, unless very low classification thresholds are chosen. Nevertheless, this has a drawback, with huge decreases in overall accuracy, especially using SVM with selected features, with the number false positives that exceed true negatives’ one. As our final model, we would choose the XG-boost using selected features, probably selecting the threshold that maximizes the F1-score/youden score; in fact, with even lower thresholds, the model classified too many false positives, obtaining a low accuracy of 0.6744. On the other hand, with 0.05 as threshold, the model reaches a recall of 0.859, identifying almost all fraud correctly. At the end, the threshold choice would depend on a real case scenario, where – for example – we might want to get a high recall regardless the overall accuracy
+## Models Explored
 
+Several supervised machine learning models were evaluated:
+
+- **Logistic Regression**
+- **Support Vector Machines (SVM)**
+- **Random Forest**
+- **XGBoost**
+
+## Key Findings
+
+- All models model achieved a good accuracy score of over 90%.
+- One common challenge was achieving a high recall without sacrificing overall accuracy.
+- Achieving a good recall often required setting very low classification thresholds.
+- The choice of threshold significantly impacted model performance and trade-offs.
+
+## Conclusion
+
+After thorough evaluation and comparison of the models, several insights were gained:
+
+- Despite high accuracy, models struggled to achieve good recall without using very low thresholds.
+- Extremely low thresholds led to a notable decrease in overall accuracy due to an increase in false positives.
+- The XGBoost model with selected features stood out as the final choice due to its balanced performance.
+- By selecting a threshold that optimized the F1-score or Youden score, the XGBoost model achieved a compelling recall of 85.9% while maintaining an acceptable accuracy.
+- The threshold decision would ultimately depend on real-world scenarios and priorities. For instance, a higher recall might be favored over overall accuracy in cases where correctly identifying fraud is paramount.
+
+This project highlights the intricacies of balancing accuracy and recall in fraud detection scenarios and provides valuable insights into the performance of various machine learning models.
